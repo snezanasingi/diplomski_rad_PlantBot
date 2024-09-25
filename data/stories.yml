@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: customer
+  steps:
+    - intent: visitor
+    - action: utter_visitor
+
+- story: work
+  steps:
+    - intent: employee
+    - action: utter_employee
+
+- story: most questions
+  steps:
+    - intent: what_v_can_do
+    - action: utter_what_v_can_do
+
+- story: support
+  steps:
+    - intent: contact
+    - action: utter_contact
+
+
+- story: Express Thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+
+- story: Employer story
+  steps:
+  - intent: support_employee 
+  - action: utter_employer_problems
+  - intent: work_email
+  - action: action_login_problem
+  - action: utter_end_support
+
+
+- story: Order roses
+  steps:
+  - intent: order_plant
+  - action: action_order_plant
+  - intent: order_roses
+  - action: action_extract_plant_entity
+  - intent: provide_quantity
+  - action: action_provide_quantity
+  - intent: provide_email
+  - action: action_provide_email
+  - intent: provide_address
+  - action: action_provide_address
+  - intent: yes_yes
+  - action: utter_yes_yes
+  - intent: no_no
+  - action: utter_no_no
+  - intent: confirm_order
+  - action: action_process_confirmation
+  - intent: reject_order
+  - action: action_process_confirmation
+
+

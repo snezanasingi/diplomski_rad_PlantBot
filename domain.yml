@@ -1,0 +1,113 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - order_roses
+  - order_plant
+  - inform_plant
+  - visitor
+  - employee
+  - what_v_can_do
+  - contact
+  - provide_quantity
+  - provide_email
+  - inform_employee
+  - provide_address
+  - yes_yes
+  - no_no
+  - confirm_order
+  - reject_order
+  - support_employee
+  - work_email
+ 
+
+entities:
+  - plant
+  - quantity
+  - email
+  - address
+
+slots:
+  selected_plant:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: plant
+        intent: order_roses
+  selected_quantity:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: quantity
+        intent: provide_quantity
+  selected_email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
+        intent: provide_email
+  selected_address:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: address
+        intent: provide_address
+
+responses:
+  utter_greet:
+  - text: "Hello, I am glad to see you here. Are you a visitor or an employee of the Plant company?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_thanks:
+  - text: "You are welcome. It was my pleasure."
+
+  utter_visitor:
+  - text: "Dear visitor, welcome! How can I help you?"
+
+  utter_employee:
+  - text: "Dear employee, welcome! How can I help you?"
+
+  utter_what_v_can_do:
+  - text: "Plant company is a plant distribution company dedicated to providing high-quality plants and exceptional customer service.
+  We offer a wide selection of plants, from popular favorites to rare and unique varieties, that makes us unique company as well. You can make your order easy, just tell me if you want. For more informations please contact us at plant@gmail.com."
+
+  utter_contact:
+  - text: "Please feel free to contact us at plant@gmail.com. We look forward to hearing from you and helping you find the perfect plants for your needs!"
+
+  # utter_inform_employee:  
+  # - text: "We have new order!"
+
+  utter_yes_yes:
+  - text: "Sure if you want to order more, first finish this order. Please reply with 'I confirm' to confirm or 'I reject' to cancel this order. Continue with your next order in format: I want to order plantname"
+
+  utter_no_no:
+  - text: "Sure, I will provide your full order. Please reply with 'I confirm' to confirm or 'I reject' to cancel your order."
+
+  utter_end_support:
+  - text: "Thank you for reaching out. Your issue has been recorded, and we will get back to you as soon as possible. Have a great day!"
+
+  utter_employer_problems:
+  - text: "I am sorry to hear that you're having trouble logging in. Please provide your email address so we can assist you."
+
+
+actions:
+  - action_extract_plant_entity
+  - action_order_plant
+  - action_provide_quantity
+  - action_provide_email
+  - action_provide_address
+  - action_process_confirmation
+  - action_login_problem
+  
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

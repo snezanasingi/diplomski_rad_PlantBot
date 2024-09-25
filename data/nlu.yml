@@ -1,0 +1,188 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: visitor
+  examples: |
+    - I am a visitor
+    - visitor
+    - v
+    - a visitor
+
+- intent: what_v_can_do
+  examples: |
+    - what can I do here
+    - What can I do on this website
+    - how do I use this site
+    - what are the options available to me
+    - what can I see here
+    - how do I order plants
+    - do you have a catalog
+    - can I buy plants from you
+    - is there a gallery of your plants
+    - can I register on this website
+    - what are the steps to purchase a plant
+    - how do I create an account
+    - what is the process for ordering
+    - are there any instructions on ordering
+    - what are the benefits of registering
+    - what makes your website unique
+    - do you offer discounts
+    - what kind of plants do you have
+
+- intent: contact   
+  examples: |
+    - Is there a way to contact you
+    - how to contact you
+    - contact
+    - help me
+    - support
+ 
+
+- intent: employee
+  examples: |
+    - I am an employee
+    - employee
+    - an employee
+    - e
+    - I work here
+    - I work
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thanks you
+    - appreciate it
+    - many thanks
+
+- intent: provide_email 
+  examples: | 
+    - It is [email@gmail.com](email)
+    - [email@egmail.com](email)
+
+- intent: order_roses
+  examples: |
+    - I want to order [roses](plant)
+    - can i get a [roses](plant)
+    - i'd like to have a [roses](plant)
+    - let's order a [roses](plant)
+    - how about [roses](plant)
+    - I want to order [mint](plant)
+    - I want to order [chamomile](plant)
+   
+
+- intent: provide_quantity
+  examples: | 
+      - [50] (quantity)
+      - [60] (quantity)
+      - [70] (quantity)
+      - [80] (quantity)
+      - [90](quantity)
+      - [100] (quantity)
+      - [150] (quantity)
+      - [200] (quantity)
+      - [250] (quantity)
+      - [300] (quantity)
+      - [400] (quantity) 
+      - [500] (quantity)
+      - no I want [50] (quantity)
+      - I want [50] (quantity)
+
+- intent: order_plant
+  examples: |
+    - I want to order a plant
+    - I want to order plants
+    - Can i get some plants, please
+    - Let's order some plants
+    - How to order
+    - order
+
+- intent: provide_address
+  examples: |
+    - [Street bojnicka 55](address)
+    - [Street main 1](address)
+    - [Street petra 20](address)
+    - [Street example road 3](address)
+    - [Street dusanova 12](address)
+    - My address is [Street Main 1](address)
+    - Delivery address is [Street St 9](address)
+    - Send it to [Street Example 17](address)
+    - adress [Street Avenue 55](address)
+    - [Street Main 111](address)
+
+- intent: yes_yes
+  examples: |
+    - yes
+    - yeah
+    - y
+    - sure
+    - ofc
+    - ok
+
+- intent: no_no
+  examples: |
+    - no
+    - It is enough
+    - n
+    - I do not want
+    - I don't want
+    - enough
+    - It's enough for now
+    - It's enough
+
+- intent: confirm_order
+  examples: |
+    - I confirm 
+
+- intent: reject_order
+  examples: |
+    - I reject
+
+- intent: support_employee 
+  examples: |
+    - login problems
+    - I can't login
+    - login
+    - Can't login
+    - Problem
+    - Problem login
+    - login error
+    - Error 
+    - Login doesn't work
+    - I can't open login
+
+- intent: work_email
+  examples: |
+    - [ljuba@lj.com](email)
+    - [milos@m.com](email)
+    - [s@m.com](email)
+
